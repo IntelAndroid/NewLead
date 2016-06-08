@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ioc"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:textColor="#000"
+        android:id="@+id/titlest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/ioc"
+        android:layout_toRightOf="@+id/ioc"
+        android:text="日本新驻华大使"
+        android:textSize="16dp"/>
+
+    <ImageView
+        android:id="@+id/image_praise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/time_test"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/time_test"
+        android:layout_toStartOf="@+id/time_test"
+        android:src="@drawable/comment_praise_handle_forbid"/>
+
+    <TextView
+        android:textColor="#000"
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="北京举行就任后的首次记者会"
+        android:textSize="12dp"
+        android:layout_below="@+id/titlest"
+        android:layout_toRightOf="@+id/ioc"
+        android:layout_toEndOf="@+id/ioc"/>
+    <TextView
+        android:textColor="#000"
+        android:id="@+id/time_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ioc"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="2016-06-17 17:31:20.0"/>
+</RelativeLayout>

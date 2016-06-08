@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NewLead</string>
+    <string name="app_skip">直接跳过</string>
+    <string name="action_settings">Settings</string>
+</resources>
