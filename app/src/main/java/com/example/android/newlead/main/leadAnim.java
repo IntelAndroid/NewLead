@@ -48,17 +48,11 @@ public class leadAnim extends AppCompatActivity implements ViewPager.OnPageChang
             startActivity(new Intent(this, LeadAlpha.class));
             finish();
         } else {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean(IS_FIRST_RUN, false);
+            editor.commit();
             initview();
-
-
         }
-    }
-
-    public void savepreferences() {
-        SharedPreferences sharedPreferences = getSharedPreferences(LEAD_CONFIG, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(IS_FIRST_RUN, false);
-        editor.commit();
     }
 
     public void initview() {
@@ -67,7 +61,6 @@ public class leadAnim extends AppCompatActivity implements ViewPager.OnPageChang
         mtext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                savepreferences();
                 startActivity(new Intent(leadAnim.this, MainActivity.class));
                 finish();
             }

@@ -52,6 +52,8 @@ public class WebActivity extends AppCompatActivity {
         String Urls = getIntent().getStringExtra("link");
         mWebView.loadUrl(Urls);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setSupportZoom(true);
+        mWebView.getSettings().setBuiltInZoomControls(true);
         mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
         mProgressBar.setVisibility(View.VISIBLE);
